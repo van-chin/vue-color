@@ -76,17 +76,46 @@ export default {
     },
     handleMouseDown (e) {
       // this.handleChange(e, true)
-      window.addEventListener('mousemove', this.handleChange)
-      window.addEventListener('mouseup', this.handleChange)
-      window.addEventListener('mouseup', this.handleMouseUp)
+      // window.addEventListener('mousemove', this.handleChange)
+      // window.addEventListener('mouseup', this.handleChange)
+      // window.addEventListener('mouseup', this.handleMouseUp)
+
+      console.info(document.querySelectorAll('.saturation-wrap-id'));
+
+      document.querySelectorAll('.saturation-wrap-id').forEach((node)=>{
+        console.info(node);
+        node.addEventListener('mousemove', this.handleChange)
+        node.addEventListener('mouseup', this.handleChange)
+        node.addEventListener('mouseup', this.handleMouseUp)
+      })
+
+
+
+      // document.querySelectorAll('.saturation-wrap-id').addEventListener('mousemove', this.handleChange);
+
+      // document.querySelector('.saturation-wrap-id').addEventListener('mousemove', this.handleChange)
+      // document.querySelector('.saturation-wrap-id').addEventListener('mouseup', this.handleChange)
+      // document.querySelector('.saturation-wrap-id').addEventListener('mouseup', this.handleMouseUp)
     },
     handleMouseUp (e) {
       this.unbindEventListeners()
     },
     unbindEventListeners () {
-      window.removeEventListener('mousemove', this.handleChange)
-      window.removeEventListener('mouseup', this.handleChange)
-      window.removeEventListener('mouseup', this.handleMouseUp)
+      // window.removeEventListener('mousemove', this.handleChange)
+      // window.removeEventListener('mouseup', this.handleChange)
+      // window.removeEventListener('mouseup', this.handleMouseUp)
+
+      // document.querySelector('.saturation-wrap-id').removeEventListener('mousemove', this.handleChange)
+      // document.querySelector('.saturation-wrap-id').removeEventListener('mouseup', this.handleChange)
+      // document.querySelector('.saturation-wrap-id').removeEventListener('mouseup', this.handleMouseUp)
+
+
+      document.querySelectorAll('.saturation-wrap-id').forEach((node)=>{
+        console.info(node);
+        node.removeEventListener('mousemove', this.handleChange)
+        node.removeEventListener('mouseup', this.handleChange)
+        node.removeEventListener('mouseup', this.handleMouseUp)
+      })
     }
   }
 }

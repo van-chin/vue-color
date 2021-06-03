@@ -1,9 +1,9 @@
 <template>
-  <div role="application" aria-label="Sketch color picker" :class="['vc-sketch', disableAlpha ? 'vc-sketch__disable-alpha' : '']">
-    <div class="vc-sketch-saturation-wrap">
+  <div role="application" aria-label="Sketch color picker" style="border:1px solid red;" :class="['vc-sketch', disableAlpha ? 'vc-sketch__disable-alpha' : '']">
+    <div class="vc-sketch-saturation-wrap saturation-wrap-id" >
       <saturation :value="colors" @change="childChange"></saturation>
     </div>
-    <div class="vc-sketch-controls">
+    <div class="vc-sketch-controls" style="border:1px solid red;">
       <div class="vc-sketch-sliders">
         <div class="vc-sketch-hue-wrap">
           <hue :value="colors" @change="childChange"></hue>
